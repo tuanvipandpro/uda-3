@@ -8,6 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      DOCKER_USERNAME: tuanvipandpro
       UDAGRAM_API_FEED_IMAGE_NAME: udagram-api-feed
       UDAGRAM_API_USER_IMAGE_NAME: udagram-api-user
       UDAGRAM_FRONTEND_IMAGE_NAME: udagram-frontend
