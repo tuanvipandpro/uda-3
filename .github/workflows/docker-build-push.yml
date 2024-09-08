@@ -41,6 +41,13 @@ jobs:
         run: 
           docker-compose -f ./docker-compose-build.yaml build --parallel --no-cache
 
+      - name: Tag Docker Images
+        run: |
+          docker tag $UDAGRAM_API_FEED_IMAGE_NAME $DOCKER_USERNAME/$UDAGRAM_API_FEED_IMAGE_NAME:$TAG
+          docker tag $UDAGRAM_API_USER_IMAGE_NAME $DOCKER_USERNAME/$UDAGRAM_API_USER_IMAGE_NAME:$TAG
+          docker tag $UDAGRAM_FRONTEND_IMAGE_NAME $DOCKER_USERNAME/$UDAGRAM_FRONTEND_IMAGE_NAME:$TAG
+          docker tag $UDAGRAM_REVERSEPROXY_IMAGE_NAME $DOCKER_USERNAME/$UDAGRAM_REVERSEPROXY_IMAGE_NAME:$TAG
+
       - name: Push Docker Images
         run: |
           docker push $DOCKER_USERNAME/$UDAGRAM_API_FEED_IMAGE_NAME:$TAG
