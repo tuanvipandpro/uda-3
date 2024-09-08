@@ -11,6 +11,7 @@ import { AuthMenuUserComponent } from './auth-menu-button/auth-menu-user/auth-me
 import { ApiModule } from '../api/api.module';
 
 const entryComponents = [AuthMenuUserComponent, AuthMenuButtonComponent, AuthLoginComponent, AuthRegisterComponent];
+// @ts-ignore
 const components = [...entryComponents];
 
 @NgModule({
