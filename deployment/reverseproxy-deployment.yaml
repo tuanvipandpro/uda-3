@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: reverseproxy
-          image: docker.io/tuanvipandpro/reverseproxy:v6
+          image: docker.io/tuanvipandpro/reverseproxy:v7
           ports:
             - containerPort: 8080
           env:
